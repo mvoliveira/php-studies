@@ -79,7 +79,15 @@ class CursoList extends TStandardList
         $action_edit->setImage('fa:pencil-square-o blue fa:lg');
         $action_edit->setField('id');
         $this->datagrid->addAction($action_edit);
-        
+
+        // criando botao delete
+        $action_del = new TDataGridAction(array($this, 'onEdit'));
+        $action_del->setButtonClass('btn btn-default');
+        $action_del->setLabel('Editar');
+        $action_del->setImage('fa:trash-o red fa:lg');
+        $action_del->setField('id');
+        $this->datagrid->addAction($action_del);
+
 
 
 
