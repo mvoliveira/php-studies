@@ -134,7 +134,7 @@ class CursoForm extends TStandardForm
             return $object;
         }else{
             $this->form->clear();
-        }
+            }
         }
         catch(Exception $e)
         {
@@ -145,6 +145,4 @@ class CursoForm extends TStandardForm
             TTransaction::rollback;
         }
     }
-
-
 }
