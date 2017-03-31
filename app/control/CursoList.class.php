@@ -57,6 +57,12 @@ class CursoList extends TStandardList
         $this->datagrid->addColumn($column_sigla);
         $this->datagrid->addColumn($column_desc);
 
+        //criando botoes(actions) para o data grid;
+        // reload
+        $order_id = new TAction(array($this, 'onReload'));
+        $order_id->setParameter('order', 'id');
+        $colums_id->setAction($order_id);
+
         // criando datagrid model
         $this->datagrid->createModel();
 
