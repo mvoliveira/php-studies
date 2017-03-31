@@ -88,6 +88,8 @@ class CursoList extends TStandardList
         $action_del->setField('id');
         $this->datagrid->addAction($action_del);
 
+        
+
 
 
 
