@@ -72,6 +72,17 @@ class CursoList extends TStandardList
         $order_sigla->setParameter('order', 'id');
         $colums_sigla->setAction($order_id);
 
+        // criando botao edit
+        $action_edit = new TDataGridAction(array('CursoForm', 'onEdit'));
+        $action_edit->setButtonClass('btn btn-default');
+        $action_edit->setLabel('Editar');
+        $action_edit->setImage('fa:pencil-square-o blue fa:lg');
+        $action_edit->setField('id');
+        $this->datagrid->addAction($action_edit);
+        
+
+
+
         // criando datagrid model
         $this->datagrid->createModel();
 
