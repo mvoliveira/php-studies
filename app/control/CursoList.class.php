@@ -62,15 +62,15 @@ class CursoList extends TStandardList
         // reload
         $order_id = new TAction(array($this, 'onReload'));
         $order_id->setParameter('order', 'id');
-        $colums_id->setAction($order_id);
+        $column_id->setAction($order_id);
 
         $order_nome = new TAction(array($this, 'onReload'));
-        $order_nome->setParameter('order', 'id');
-        $colums_nome->setAction($order_id);
+        $order_nome->setParameter('order', 'nome');
+        $column_nome->setAction($order_nome);
 
         $order_sigla = new TAction(array($this, 'onReload'));
-        $order_sigla->setParameter('order', 'id');
-        $colums_sigla->setAction($order_id);
+        $order_sigla->setParameter('order', 'sigla');
+        $column_sigla->setAction($order_sigla);
 
         // criando botao edit
         $action_edit = new TDataGridAction(array('CursoForm', 'onEdit'));
@@ -81,14 +81,14 @@ class CursoList extends TStandardList
         $this->datagrid->addAction($action_edit);
 
         // criando botao delete
-        $action_del = new TDataGridAction(array($this, 'onEdit'));
+        $action_del = new TDataGridAction(array($this, 'onDelete'));
         $action_del->setButtonClass('btn btn-default');
         $action_del->setLabel('Editar');
         $action_del->setImage('fa:trash-o red fa:lg');
         $action_del->setField('id');
         $this->datagrid->addAction($action_del);
 
-        
+
 
 
 
